@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.POR || 5000
-// const cors = require('cors')
+const cors = require('cors')
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 
@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(bodyParser.json())
 require('dotenv').config()
 
-// app.use(cors())
+app.use(cors())
 
 // Database Connection
 require("./app/config/db.connection")(mongoose)
