@@ -9,6 +9,7 @@ import {
 import Home from "./views/home";
 import About from "./views/about";
 import Footer from "./components/footer";
+import UserList from './views/user/list';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about/*" element={<About />} />
+          <Route path="user/list" element={<UserList />} />
         </Routes>
 
         <Footer/>
