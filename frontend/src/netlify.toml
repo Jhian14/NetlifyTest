@@ -6,8 +6,3 @@
   from = "/*"
   to = "/"
   status = 200
-
- [[redirects]]
-  from = "/api/*"
-  to = "https://react-crud-kc1p.onrender.com/api/:splat"
-  status = 200
