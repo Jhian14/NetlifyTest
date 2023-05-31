@@ -24,13 +24,17 @@ const UserList = () => {
         <div>
             <h1>User List</h1>
 
-            {list.map((user, i) =>
+            {list.length > 0 ? list.map((user, i) =>
                 <div key={i}>
                     <p style={{margin: 0}}>Email: {user.email}</p>
                     <p style={{margin: 0}}>Usename: {user.full_name}</p>
                     <br/>
                 </div>
-            )}
+            )
+            :
+            <p>There are no users.</p>
+        
+        }
         </div>
     )
 }
