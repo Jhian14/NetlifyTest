@@ -18,6 +18,7 @@ exports.getAllUsers = async (req, res) => {
 
     try {
         const users = await Users.find({ _id: { $ne: _id } })
+        console.log("users", users)
         return res.json(users)
 
     } catch (error) {
@@ -31,6 +32,7 @@ exports.getUser = async (req, res) => {
 
     try {
         const user = await Users.findById(_id)
+        console.log("users", users)
         return res.json(user)
 
     } catch (error) {

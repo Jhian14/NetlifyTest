@@ -12,7 +12,8 @@ const UserList = () => {
         await axios.get(
             `/api/users/`
         ).then((value) => {
-            console.log("value", value.data)
+            console.log("value", value)
+            console.log("data", value.data)
             setList(value.data)
         }).catch((e) => {
             console.log("e", e)
