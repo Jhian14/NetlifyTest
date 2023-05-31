@@ -1,0 +1,13 @@
+[build]
+  command  = "CI=false npm run build"
+
+# REACT ROUTER
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+ [[redirects]]
+  from = "/api/*"
+  to = "https://react-crud-kc1p.onrender.com/api/:splat"
+  status = 200
